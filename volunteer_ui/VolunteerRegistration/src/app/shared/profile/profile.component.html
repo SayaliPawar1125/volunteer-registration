@@ -1,0 +1,19 @@
+<mat-card style="max-width:400px;margin:30px auto;">
+  <h2>My Profile</h2>
+
+  <p><b>Name:</b> {{ user?.name }}</p>
+  <p><b>Email:</b> {{ user?.email }}</p>
+  <p><b>Role:</b> {{ user?.role }}</p>
+  <p><b>City:</b> {{ user?.city }}</p>
+  <p><b>State:</b> {{ user?.state }}</p>
+
+  <button mat-raised-button color="primary" (click)="goChangePassword()">
+    Change Password
+  </button>
+
+  <br><br>
+
+  <button mat-raised-button color="warn" (click)="logout()">
+    Logout
+  </button>
+</mat-card>

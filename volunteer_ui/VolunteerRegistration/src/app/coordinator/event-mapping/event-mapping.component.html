@@ -1,0 +1,30 @@
+<div style="display:flex; gap:30px; padding:20px">
+
+  <!-- LEFT: EVENTS -->
+  <div style="width:40%">
+    <h3>Upcoming Events</h3>
+    <ul>
+      <li *ngFor="let e of events">
+        <button mat-button (click)="selectEvent(e.id)">
+          {{ e.program }} | {{ e.start_date }}
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- RIGHT: VOLUNTEERS -->
+  <div style="width:60%">
+    <h3>Volunteers</h3>
+
+    <mat-checkbox *ngFor="let v of volunteers"
+      (change)="toggleVolunteer(v.volunteer_id)">
+      {{ v.name }} | {{ v.email }} | {{ v.phone }}
+    </mat-checkbox>
+
+    <br><br>
+    <button mat-raised-button color="primary" (click)="assign()">
+      Send Email & Assign
+    </button>
+  </div>
+
+</div>

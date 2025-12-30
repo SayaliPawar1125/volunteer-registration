@@ -1,0 +1,7 @@
+<h2>Upcoming Events</h2>
+
+<ul>
+  <li *ngFor="let e of events">
+    {{ e.program }} | {{ e.start_date }} - {{ e.end_date }} | {{ e.city }}
+  </li>
+</ul>

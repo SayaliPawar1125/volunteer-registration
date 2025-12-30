@@ -1,0 +1,45 @@
+<mat-card>
+  <h2>Add Event</h2>
+
+  <form [formGroup]="eventForm">
+
+    <mat-form-field class="full">
+      <mat-select placeholder="Program" formControlName="program_id">
+        <mat-option *ngFor="let p of programs" [value]="p.id">
+          {{ p.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="full">
+      <input matInput placeholder="Description" formControlName="description">
+    </mat-form-field>
+
+    <mat-form-field class="full">
+      <input matInput type="date" formControlName="start_date">
+    </mat-form-field>
+
+    <mat-form-field class="full">
+      <input matInput type="date" formControlName="end_date">
+    </mat-form-field>
+
+    <mat-form-field class="full">
+      <input matInput placeholder="Address" formControlName="address">
+    </mat-form-field>
+
+    <mat-form-field class="full">
+      <input matInput placeholder="City" formControlName="city">
+    </mat-form-field>
+
+    <mat-form-field class="full">
+      <input matInput placeholder="State" formControlName="state">
+    </mat-form-field>
+
+    <mat-form-field class="full">
+      <input matInput placeholder="Pincode" formControlName="pincode">
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="submit()">Save</button>
+
+  </form>
+</mat-card>

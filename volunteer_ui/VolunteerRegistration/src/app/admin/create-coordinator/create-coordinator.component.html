@@ -1,0 +1,31 @@
+<mat-card style="max-width:400px; margin:30px auto;">
+  <h2>Create Coordinator</h2>
+
+  <form [formGroup]="coordinatorForm">
+
+    <mat-form-field class="full">
+      <input matInput placeholder="Name" formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field class="full">
+      <input matInput placeholder="Email" formControlName="email">
+    </mat-form-field>
+
+    <mat-form-field class="full">
+      <input matInput type="password" placeholder="Password" formControlName="password">
+    </mat-form-field>
+
+    <mat-form-field class="full">
+      <input matInput placeholder="City" formControlName="city">
+    </mat-form-field>
+
+    <mat-form-field class="full">
+      <input matInput placeholder="State" formControlName="state">
+    </mat-form-field>
+
+    <button mat-raised-button color="accent" (click)="submit()">
+      Create Coordinator
+    </button>
+
+  </form>
+</mat-card>

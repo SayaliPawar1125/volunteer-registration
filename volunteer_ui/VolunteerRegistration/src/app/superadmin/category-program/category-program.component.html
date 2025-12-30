@@ -1,0 +1,37 @@
+<div style="padding:20px">
+
+  <mat-card>
+    <h3>Add Category</h3>
+    <mat-form-field class="full">
+      <input matInput placeholder="Category name" formControlName="name" [formGroup]="categoryForm">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="addCategory()">Add</button>
+  </mat-card>
+
+  <br>
+
+  <mat-card>
+    <h3>Add Program</h3>
+    <form [formGroup]="programForm">
+      <mat-form-field class="full">
+        <mat-select placeholder="Category" formControlName="category_id">
+          <mat-option *ngFor="let c of categories" [value]="c.id">
+            {{ c.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field class="full">
+        <input matInput placeholder="Program name" formControlName="name">
+      </mat-form-field>
+
+      <mat-form-field class="full">
+        <input matInput placeholder="Description" formControlName="description">
+      </mat-form-field>
+
+      <button mat-raised-button color="accent" (click)="addProgram()">Add</button>
+    </form>
+  </mat-card>
+
+</div>
+
